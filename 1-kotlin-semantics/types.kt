@@ -5,6 +5,7 @@
 fun main() {
     doubleSample()
     stringSample()
+    booleanSample()
 }
 
 fun doubleSample() {
@@ -30,14 +31,12 @@ fun stringSample() {
     val reminder = nextMeeting + ": " + date + ", " + location
     
     println(reminder)
+    
+    println("say \"hello\"")
 }
 
-
-
-
-
-
-
-
-
-
+fun booleanSample() {
+	var notifFlag: Boolean = false
+	
+    println(notifFlag)
+}

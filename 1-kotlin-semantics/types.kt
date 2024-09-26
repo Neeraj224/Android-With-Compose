@@ -6,6 +6,9 @@ fun main() {
     doubleSample()
     stringSample()
     booleanSample()
+    
+    println(areNotificationsEnabled(false))
+    println(areNotificationsEnabled(true))
 }
 
 fun doubleSample() {
@@ -33,6 +36,14 @@ fun stringSample() {
     println(reminder)
     
     println("say \"hello\"")
+}
+
+fun areNotificationsEnabled(notifFlag: Boolean): String {
+    return if (!notifFlag) {
+        "Are notifications enabled? $notifFlag"
+    } else {
+        "Are notifications enabled? $notifFlag"
+    }
 }
 
 fun booleanSample() {

@@ -57,6 +57,14 @@ fun main() {
     
     println(screenTime(300, 200))
     println(screenTime(100, 220))
+    
+    println(weatherDetails("Ankara", 27, 31, 82))
+    println(weatherDetails("Tokyo", 32, 36, 10))
+    println(weatherDetails("Cape Town", 59, 64, 2))
+}
+
+fun weatherDetails(city: String, low: Int, high: Int, rain: Int): String {
+    return "\nCity: $city\nLow Temperature: $low, High Temperature: $high\nChance of rain: $rain%\n"
 }
 
 fun screenTime(timeSpentToday: Int, timeSpentYesterday: Int): Boolean {

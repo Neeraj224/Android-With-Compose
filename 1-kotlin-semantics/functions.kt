@@ -27,9 +27,12 @@ fun main() {
     var emailID = "sample@gmail.com"
     
     println(displayAlertMessage(OS, emailID))
+    println(displayAlertMessage("Windows", emailID))
+    println(displayAlertMessage(emailID = emailID))
+    println(displayAlertMessage("Mac OS", emailID))
 }
 
-fun displayAlertMessage(operatingSystem: String, emailID: String): String {
+fun displayAlertMessage(operatingSystem: String = "Unknown OS", emailID: String): String {
     return "There's a new sign-in request on $operatingSystem for your Google Account $emailID."
 }
 

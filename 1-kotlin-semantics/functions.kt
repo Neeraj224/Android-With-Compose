@@ -54,6 +54,13 @@ fun main() {
     val steps = 5000
     val caloriesBurnt = pedometerStepsToCalories(steps)
     println("Walking $steps steps burns $caloriesBurnt calories for you!")
+    
+    println(screenTime(300, 200))
+    println(screenTime(100, 220))
+}
+
+fun screenTime(timeSpentToday: Int, timeSpentYesterday: Int): Boolean {
+    return timeSpentToday > timeSpentYesterday
 }
 
 fun displayAlertMessage(operatingSystem: String = "Unknown OS", emailID: String): String {

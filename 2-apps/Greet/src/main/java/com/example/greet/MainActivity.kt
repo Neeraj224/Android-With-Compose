@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
@@ -43,7 +44,9 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Column(
-            modifier = Modifier.fillMaxSize().padding(16.dp),
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(16.dp),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
@@ -59,10 +62,32 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
             )
         }
 
-        Spacer(modifier = Modifier.height(16.dp))
+        Row {
+            Surface (
+                color = Color(red = 0.27f, green = 0.26f, blue = 0.72f, alpha = 0.4f),
+                shape = RoundedCornerShape(16.dp),
+                modifier = Modifier.padding(5.dp)
+            ){
+                Text(
+                    text = "This is me",
+                    modifier = modifier.padding(24.dp)
+                )
+            }
+
+            Surface(
+                color = Color(red = 0.1f, green = 0.4f, blue = 0.3f, alpha = 0.4f),
+                shape = RoundedCornerShape(16.dp),
+                modifier = Modifier.padding(5.dp)
+            ) {
+                Text(
+                    text = "Composing(?)",
+                    modifier = modifier.padding(24.dp)
+                )
+            }
+        }
 
         Surface(
-            color = Color(red = 0.4f, green = 0.8f, blue = 0.9f, alpha = 0.4f),
+            color = Color(red = 0.9f, green = 0.6f, blue = 0.1f, alpha = 0.4f),
             shape = RoundedCornerShape(16.dp),
             modifier = Modifier.padding(16.dp)
         ) {
@@ -70,6 +95,18 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                 text = "where is my mind?",
                 modifier = modifier
                     .blur(4.dp)
+                    .padding(24.dp)
+            )
+        }
+
+        Surface(
+            color = Color(red = 0.9f, green = 0.2f, blue = 0.2f, alpha = 0.4f),
+            shape = RoundedCornerShape(16.dp),
+        ) {
+            Text(
+                text = "ideka",
+                modifier = modifier
+                    .blur(1.dp)
                     .padding(24.dp)
             )
         }

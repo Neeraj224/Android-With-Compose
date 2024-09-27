@@ -19,6 +19,50 @@ fun main() {
     
     checkMessage()
     checkMessage(false)
+    
+    basicMath(10, 12)
+    // basicMath(0, 12)
+}
+
+fun basicMath(num1: Int, num2: Int) {
+	var sum = add(num1, num2)
+    var difference = sub(num1, num2)
+    var product = mult(num1, num2)
+    var quotient = div(num1, num2)
+    
+    println(sum)
+    println(difference)
+    println(product)
+    println(quotient)
+}
+
+fun add(num1: Int, num2: Int): Int {
+    return num1 + num2
+}
+
+fun sub(num1: Int, num2: Int): Int {
+    if (num1 >= num2) {
+     return num1 - num2   
+    } else {
+        return num2 - num1
+    }
+}
+
+fun mult(num1: Int, num2: Int): Int {
+    if (num1 == 0 || num2 == 0) {
+        return 0
+    } else {
+        return num1 * num2
+    }
+}
+
+fun div(num1: Int, num2: Int): Int {
+    if (num1 == 0) {
+        println("Cannot divide by zero!")
+        return -1
+    } else {
+        return num2 / num1
+    }
 }
 
 // example of a default argument, that is always set to a fixed value

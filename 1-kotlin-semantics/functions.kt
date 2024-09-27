@@ -22,6 +22,15 @@ fun main() {
     
     basicMath(10, 12)
     // basicMath(0, 12)
+    
+    val OS = "Chrome OS"
+    var emailID = "sample@gmail.com"
+    
+    println(displayAlertMessage(OS, emailID))
+}
+
+fun displayAlertMessage(operatingSystem: String, emailID: String): String {
+    return "There's a new sign-in request on $operatingSystem for your Google Account $emailID."
 }
 
 fun basicMath(num1: Int, num2: Int) {

@@ -16,6 +16,20 @@ fun main() {
     println("message sent ? -> " + messageQueue(sender = "Alex", recipient = "Fran", body = "Hey F, hope we're still up for coffee today! Can't wait to tell you what happened at the office!"))
 	// these named arguments can also be reordered and sent:
     println("message sent ? -> " + messageQueue(recipient = "Alex", sender = "Fran", body = "Hey A! Yes, absolutely! Looking forward to meeting later! See ya!!"))
+    
+    checkMessage()
+    checkMessage(false)
+}
+
+// example of a default argument, that is always set to a fixed value
+fun checkMessage(received: Boolean = true): Boolean {
+    if (received == true) {
+        println("Message was received successfully.")
+        return true
+    } else {
+        println("Could not receive the message. Please try again.")
+        return false
+    }
 }
 
 fun sentMessage(sending: Boolean): Boolean {

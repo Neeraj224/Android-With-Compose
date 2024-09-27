@@ -50,10 +50,22 @@ fun main() {
 
     println(displayAlertMessage(thirdUserOperatingSystem, thirdUserEmailId))
     println()
+    
+    val steps = 5000
+    val caloriesBurnt = pedometerStepsToCalories(steps)
+    println("Walking $steps steps burns $caloriesBurnt calories for you!")
 }
 
 fun displayAlertMessage(operatingSystem: String = "Unknown OS", emailID: String): String {
     return "There's a new sign-in request on $operatingSystem for your Google Account $emailID."
+}
+
+fun pedometerStepsToCalories(numberOfSteps: Int): Double {
+    val caloriesBurntPerStep = 0.04
+    
+    val totalCaloriesBurnt = numberOfSteps * caloriesBurntPerStep
+    
+    return totalCaloriesBurnt
 }
 
 fun basicMath(num1: Int, num2: Int) {

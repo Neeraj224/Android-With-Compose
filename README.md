@@ -1,4 +1,4 @@
-# Android With Compose
+# Android [Kotlin + Jetpack Compose]
 
 This repository contains Android development projects using Jetpack Compose, the modern toolkit for building native UIs with less code and intuitive structures.
 

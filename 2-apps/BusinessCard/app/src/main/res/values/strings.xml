@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">BusinessCard</string>
+
+    <string name = "name">Neeraj Chandel</string>
+    <string name = "title">Software Engineer (Android)</string>
+
+    <string name = "contact_no">+1 (980) 361 9192</string>
+    <string name = "social_media_handle">Github: NeerajC</string>
+    <string name = "mail_id">nchandel@charlotte.edu</string>
+
+</resources>
